@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/UI/prog_void.png" type="Texture" id=2]
+[ext_resource path="res://sprites/UI/prog_bg.png" type="Texture" id=3]
+[ext_resource path="res://sprites/UI/prog_full.png" type="Texture" id=4]
+[ext_resource path="res://scripts/interface.gd" type="Script" id=5]
+
+[node name="canvas" type="CanvasLayer"]
+
+[node name="control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 300.0
+script = ExtResource( 5 )
+
+[node name="time" type="TextureRect" parent="control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_top = -64.0
+margin_right = 300.0
+texture = ExtResource( 3 )
+
+[node name="prog" type="TextureProgress" parent="control/time"]
+margin_left = -2.0
+margin_right = 598.0
+margin_bottom = 64.0
+max_value = 2000.0
+value = 2000.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 4 )
